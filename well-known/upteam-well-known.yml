@@ -1,0 +1,23 @@
+generated: '2026-07-21'
+method: searched
+source: live probe of https://upteamco.com (curl HTTP status per path)
+host: https://upteamco.com
+note: >-
+  upteamco.com returns an HTTP 302 redirect to https://www.luxclusif.com/ for
+  site paths; /.well-known/ paths return 403. No discovery documents were
+  found, so no raw files are saved. Absence recorded as valid probe data.
+documents:
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /.well-known/openid-configuration
+    status: 403
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+  - path: /.well-known/api-catalog
+    status: 403
+  - path: /.well-known/ai-plugin.json
+    status: 403
+  - path: /llms.txt
+    status: 302
+  - path: /robots.txt
+    status: 302

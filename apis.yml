@@ -1,7 +1,26 @@
 aid: upteam
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/upteam.png
 name: Upteam
-description: Upteam is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Upteam is a 500 Global portfolio company whose public web presence now points
+  at Luxclusif: upteamco.com returns an HTTP 302 redirect to luxclusif.com, the
+  B2B luxury resale platform offering wholesale distribution of pre-owned luxury
+  goods, stock acquisition, and resale-as-a-service programs. Enrichment probing
+  found no developer portal, no API documentation, and no machine-readable API
+  artifacts on either the Upteam domain or the Luxclusif site; /.well-known/
+  discovery paths on upteamco.com return 403 and site paths redirect to
+  Luxclusif.
 url: https://raw.githubusercontent.com/api-evangelist/upteam/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,11 +28,16 @@ x-backed-by:
 - 500-global
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-website-redirects-to: https://www.luxclusif.com/
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Luxury Resale
+- B2B
+- Pre-owned Goods
+- Portfolio Company
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +45,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/upteam-domain-security.yml
 - type: Website
   url: https://upteamco.com
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
