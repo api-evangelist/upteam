@@ -2,11 +2,12 @@ generated: '2026-07-21'
 method: searched
 source: live probe of https://upteamco.com (curl HTTP status per path)
 host: https://upteamco.com
-note: >-
-  upteamco.com returns an HTTP 302 redirect to https://www.luxclusif.com/ for
-  site paths; /.well-known/ paths return 403. No discovery documents were
-  found, so no raw files are saved. Absence recorded as valid probe data.
-documents:
+note: upteamco.com returns an HTTP 302 redirect to https://www.luxclusif.com/ for site paths; /.well-known/
+  paths return 403. No discovery documents were found, so no raw files are saved. Absence recorded as
+  valid probe data.
+hosts:
+- host: https://upteamco.com
+  documents:
   - path: /.well-known/security.txt
     status: 403
   - path: /.well-known/openid-configuration
@@ -17,7 +18,8 @@ documents:
     status: 403
   - path: /.well-known/ai-plugin.json
     status: 403
-  - path: /llms.txt
-    status: 302
-  - path: /robots.txt
-    status: 302
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
