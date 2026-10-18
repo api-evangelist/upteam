@@ -50,6 +50,11 @@ tags:
 - Luxury Resale
 - B2B
 - Pre-owned Goods
+tags_raw:
+- Company
+- Luxury Resale
+- B2B
+- Pre-owned Goods
 - Portfolio Company
 apis: []
 maintainers:
